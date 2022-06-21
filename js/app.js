@@ -1,43 +1,40 @@
 /*
     FILE: app.js
     DATE: 2022-06-21
-    AUTHOR: Code Fellows
+    AUTHOR: Josh Boyles
 */
 
 "use strict";
 
-/**
- * Initialize all the code when the page loads.
- */
 function initialize() {
   console.log("in initialize()");
-  handleRumble();
+  handleshop();
   handleBooleans();
-  handleColors();
+  handleboots();
+  handlepets();
+  handlefishing();
+  handlephone();
 }
 
-/**
- * Prompts user for rumble status
- */
-function handleRumble() {
-  let answer = confirm("Are you ready to rumble?");
+ let user = prompt("Welcome, what is your name?");
+      console.log(`The user's name is ${user}.`);
+            alert(`Glad you are here , ${user}.`)
+
+
+function handleshop() {
+  let answer = confirm("Are you looking for boots?");
   if (answer === true) {
-    console.log("LET'S GET READY TO RUMBLE!");
+    console.log("Needs boots.");
   } else {
-    console.log("Oh well then.");
+    console.log("Passed on buying boots.");
   }
 }
 
-/**
- * Demonstrate using boolean values
- */
 function handleBooleans() {
-  // Set up some variables
   let myBool = false;
   let anotherBool = false;
   let thirdBool = true;
 
-  // Boolean operators AND and OR
   if (myBool && thirdBool) {
     console.log(`myBool and thirdBool were both true`);
   } else if (myBool || anotherBool) {
@@ -51,21 +48,44 @@ function handleBooleans() {
   }
 }
 
-/**
- * Ask the user for their favorite color and respond.
- */
-function handleColors() {
-  let color = prompt("What is your favorite color?");
-  // Convert the color to lowercase and evaluate it
+function handleboots() {
+  let color = prompt("What is your favorite boot color?");
   switch (color.toLowerCase()) {
-    case "red":
-      console.log(`Your favorite color is red`);
+    case "black":
+      console.log(`Your favorite boot color is black.`);
       break;
-    case "blue":
-      console.log(`Your favorite color is blue`);
+    case "brown":
+      console.log(`Your favorite color is brown.`);
       break;
     default:
-      console.log(`I don't know what your favorit color is`);
-  } // end of switch
-  console.log(`finsihed with switch`);
+      console.log(`Not a valid color`);
+  } 
+  console.log(`finished with switch`);
+}
+
+function handlepets() {
+  let answer = confirm("Do you have pets?");
+  if (answer === true) {
+    console.log("Yes they are pet lovers.");
+  } else {
+    console.log("This person should get a pet.");
+  }
+}
+
+function handlefishing() {
+  let answer = confirm("Do you like to fish?");
+  if (answer === true) {
+    console.log("Sweet, hope you land a big one!");
+  } else {
+    console.log("Give it a try, fishing is a great outdoor activity!");
+  }
+}
+
+function handlephone() {
+  let answer = confirm("Like Android phones?");
+  if (answer === true) {
+    console.log("Yes Androids are the best!");
+  } else {
+    console.log("Definetly an Apple person.");
+  }alert(`Have the best day ever!! , ${user}`)
 }

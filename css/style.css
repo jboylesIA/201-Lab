@@ -1,12 +1,12 @@
 /*
     FILE: style.css
     DATE: 2022-06-21    ISO-8601
-    AUTHOR: Code Fellows
+    AUTHOR: Josh Boyles
     DESCRIPTION:  General styling
 */
 
 body {
-    background-color: aliceblue;
+    background-color: rgb(252, 240, 255);
   }
   
   h1 {
@@ -14,14 +14,14 @@ body {
   }
   
   p {
-    color: red;
+    color: rgb(9, 255, 0);
   }
   
   section p.more-content {
-    background-color: #ff0000;
+    background-color: #160968;
     color: white;
   }
   
   .more-content {
-    background-color: #0000ff;
+    background-color: #e96a15;
   }
