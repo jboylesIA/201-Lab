@@ -6,28 +6,39 @@
 
 "use strict";
 
+// global variable
+var user;
+
 function initialize() {
   console.log("in initialize()");
-  handleshop();
+  handleName();
+  handleShop();
   handleBooleans();
-  handleboots();
-  handlepets();
-  handlefishing();
-  handlephone();
+  handleBoots();
+  handlePets();
+  handleFishing();
+  handlePhone();
+  handleGuess();
 }
 
- let user = prompt("Welcome, what is your name?");
-      console.log(`The user's name is ${user}.`);
-            alert(`Glad you are here , ${user}.`)
+/**
+ * Ask for name 
+ */
+function handleName() {
+  user = prompt("Welcome, what is your name?");
+  console.log(`The user's name is ${user}.`);
+  alert(`Glad you are here , ${user}.`);
+}
 
-
-function handleshop() {
+function handleShop() {
   let answer = confirm("Are you looking for boots?");
+  let output='Passed on buying boots.';
   if (answer === true) {
-    console.log("Needs boots.");
-  } else {
-    console.log("Passed on buying boots.");
+    output = 'needs boots'
+
   }
+  console.log(output);
+  alert(output);
 }
 
 function handleBooleans() {
@@ -48,7 +59,7 @@ function handleBooleans() {
   }
 }
 
-function handleboots() {
+function handleBoots() {
   let color = prompt("What is your favorite boot color?");
   switch (color.toLowerCase()) {
     case "black":
@@ -63,7 +74,7 @@ function handleboots() {
   console.log(`finished with switch`);
 }
 
-function handlepets() {
+function handlePets() {
   let answer = confirm("Do you have pets?");
   if (answer === true) {
     console.log("Yes they are pet lovers.");
@@ -72,7 +83,7 @@ function handlepets() {
   }
 }
 
-function handlefishing() {
+function handleFishing() {
   let answer = confirm("Do you like to fish?");
   if (answer === true) {
     console.log("Sweet, hope you land a big one!");
@@ -81,7 +92,7 @@ function handlefishing() {
   }
 }
 
-function handlephone() {
+function handlePhone() {
   let answer = confirm("Like Android phones?");
   if (answer === true) {
     console.log("Yes Androids are the best!");
@@ -89,3 +100,40 @@ function handlephone() {
     console.log("Definetly an Apple person.");
   }alert(`Have the best day ever!! , ${user}`)
 }
+
+function handleGuess() {
+  let number = prompt("Guess a number 1-10");
+  console.log(`The user's guess is ${number}.`);
+  if (answer <= 9) {
+    console.log("Number guessed");
+    alert(`Not even close, ${user} try again!`);
+  } else {
+    console.log("Definetly an Apple person.");
+  }alert(`Have the best day ever!! , ${user}`)
+
+  alert(`Glad you are here , ${user}.`);
+}
+
+var n = prompt("Enter an even number");
+n = parseInt(n);
+if (isNaN(n))
+   {
+   alert("The input cannot be parsed to a number");
+   }
+else
+   {
+   if (n == 0)
+      {
+      alert("The number is zero");
+      }
+   else if (n%2)
+      {
+      alert("The number is odd");
+      }
+   else
+      {
+      alert("The number is even");
+      }
+   }
+
+   prompt()
