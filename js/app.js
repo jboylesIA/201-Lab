@@ -101,39 +101,63 @@ function handlePhone() {
   }alert(`Have the best day ever!! , ${user}`)
 }
 
-function handleGuess() {
-  let number = prompt("Guess a number 1-10");
-  console.log(`The user's guess is ${number}.`);
-  if (answer <= 9) {
-    console.log("Number guessed");
-    alert(`Not even close, ${user} try again!`);
+let question = "How many?";
+let goalAnswer = 25;
+let finished = false;
+let maxAttempts = 4;
+let currentAttempts = 0;
+while (currentAttempts < maxAttempts && !finished) {
+  currentAttempts++;
+  let answer = prompt(question);
+  let realAnswer = parseInt(answer);
+  let output = "";
+  if (realAnswer > goalAnswer) {
+    output = "Too hght";
+  } else if (realAnswer < goalAnswer) {
+    output = "Too low";
   } else {
-    console.log("Definetly an Apple person.");
-  }alert(`Have the best day ever!! , ${user}`)
+    output = "Correct!";
+    finished = true
+  }
+  alert(output);
 
-  alert(`Glad you are here , ${user}.`);
+
+/**
+ * Demonstrate some things using arrays.
+ */
+ function goArrays() {
+  console.log(`In goArrays()`);
+
+  console.log(`This is the initial array`);
+  console.table(foodsILike);
+
+  console.log(`Looping through the array`);
+  for (let index = 0; index < foodsILike.length; index++) {
+    console.log(`Item: ${foodsILike[index]}`);
+  }
+
+  let food = "swiss chard";
+  console.log(`Adding ${food}`);
+  foodsILike.push(food);
+  console.table(foodsILike);
+
+  // popping
+  food = foodsILike.pop();
+  console.log(`Popped ${food} from array`);
+  console.table(foodsILike);
+
+  // unshift
+  food = "spinach";
+  console.log(`Adding ${food}`);
+  foodsILike.unshift(food);
+  console.table(foodsILike);
+
+  // indexOf
+  food = "popcorn";
+  let index = foodsILike.indexOf(food);
+  console.log(`Index of ${food} is ${index}.`);
+
+  // Illustrates complex arrays that should probably be avoided
+  let mixedUp = ["yeehaw", 42, true, ["yo"], {}];
+  console.table(mixedUp);
 }
-
-var n = prompt("Enter an even number");
-n = parseInt(n);
-if (isNaN(n))
-   {
-   alert("The input cannot be parsed to a number");
-   }
-else
-   {
-   if (n == 0)
-      {
-      alert("The number is zero");
-      }
-   else if (n%2)
-      {
-      alert("The number is odd");
-      }
-   else
-      {
-      alert("The number is even");
-      }
-   }
-
-   prompt()

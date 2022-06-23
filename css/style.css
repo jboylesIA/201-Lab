@@ -16,6 +16,9 @@ body {
   p {
     color: rgb(9, 255, 0);
   }
+  h1 {
+    text-shadow: 2px 2px red;
+  }
   
   section p.more-content {
     background-color: #160968;
@@ -25,3 +28,25 @@ body {
   .more-content {
     background-color: #e96a15;
   }
+
+  p.one {
+    border-style: solid;
+    border-color: red;
+  }
+
+  body {
+    background-color: lightblue;
+  }
+  
+  h1 {
+    color: navy;
+    margin-left: 20px;
+  }
+  h2 {
+    color: rgb(209, 16, 129);
+    text-decoration: underline;
+}
+p {
+    font-size: 25px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
