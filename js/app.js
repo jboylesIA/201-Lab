@@ -8,6 +8,7 @@
 
 // global variable
 var user;
+var foodsILike = [];
 
 function initialize() {
   console.log("in initialize()");
@@ -38,24 +39,6 @@ function handleShop() {
   }
   console.log(output);
   alert(output);
-}
-
-function handleBooleans() {
-  let myBool = false;
-  let anotherBool = false;
-  let thirdBool = true;
-
-  if (myBool && thirdBool) {
-    console.log(`myBool and thirdBool were both true`);
-  } else if (myBool || anotherBool) {
-    console.log(`myBool or anotherBool was true`);
-  } else if (thirdBool) {
-    console.log(
-      `myBool was false and anotherBool was false, but thirdBool was true.`
-    );
-  } else {
-    console.log(`Were any of the variables true?`);
-  }
 }
 
 function handleBoots() {
@@ -99,27 +82,33 @@ function handlePhone() {
     console.log("Definetly an Apple person.");
   }alert(`Have the best day ever!! , ${user}`)
 }
-
-let question = "How many?";
-let goalAnswer = 25;
-let finished = false;
-let maxAttempts = 4;
-let currentAttempts = 0;
-while (currentAttempts < maxAttempts && !finished) 
-  currentAttempts++;
-  let answer = prompt(question);
-  let realAnswer = parseInt(answer);
-  let output = "";
-  if (realAnswer > goalAnswer) {
-    output = "Too hght";
-  } else if (realAnswer < goalAnswer) {
-    output = "Too low";
-  } else {
-    output = "Correct!";
-    finished = true
+function playGame() {
+  let question = "How many?";
+  let goalAnswer = 25;
+  let finished = false;
+  let maxAttempts = 4;
+  let currentAttempts = 0;
+  let answer
+  let realAnswer
+  let output
+  while (currentAttempts < maxAttempts && !finished) {
+    currentAttempts++;
+    console.log(currentAttempts)
+    answer = prompt(question);
+    realAnswer = parseInt(answer);
+    if (realAnswer > goalAnswer) {
+      output = "Too hght";
+    } else if (realAnswer < goalAnswer) {
+      output = "Too low";
+    } else if (realAnswer === goalAnswer) {
+      output = "Correct!";
+      finished = true
+    } else {
+      output = 'Please give a number.'
+    }
+    alert(output);
   }
-  alert(output);
-
+}
 
 /**
  * Demonstrate some things using arrays.
@@ -160,9 +149,21 @@ while (currentAttempts < maxAttempts && !finished)
   let mixedUp = ["yeehaw", 42, true, ["yo"], {}];
   console.table(mixedUp);
 } 
- 
-goArrays();
 
+function handleBooleans() {
+  let myBool = false;
+  let anotherBool = false;
+  let thirdBool = true;
 
-
-
+  if (myBool && thirdBool) {
+    console.log(`myBool and thirdBool were both true`);
+  } else if (myBool || anotherBool) {
+    console.log(`myBool or anotherBool was true`);
+  } else if (thirdBool) {
+    console.log(
+      `myBool was false and anotherBool was false, but thirdBool was true.`
+    );
+  } else {
+    console.log(`Were any of the variables true?`);
+  }
+}
