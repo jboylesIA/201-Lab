@@ -160,3 +160,5 @@ while (currentAttempts < maxAttempts && !finished)
   let mixedUp = ["yeehaw", 42, true, ["yo"], {}];
   console.table(mixedUp);
 }
+goArrays(); line 165
+
