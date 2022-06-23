@@ -18,8 +18,7 @@ function initialize() {
   handlePets();
   handleFishing();
   handlePhone();
-  handleGuess();
-}
+  }
 
 /**
  * Ask for name 
