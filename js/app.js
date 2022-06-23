@@ -106,7 +106,7 @@ let goalAnswer = 25;
 let finished = false;
 let maxAttempts = 4;
 let currentAttempts = 0;
-while (currentAttempts < maxAttempts && !finished) {
+while (currentAttempts < maxAttempts && !finished) 
   currentAttempts++;
   let answer = prompt(question);
   let realAnswer = parseInt(answer);
