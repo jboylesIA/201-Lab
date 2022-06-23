@@ -159,6 +159,10 @@ while (currentAttempts < maxAttempts && !finished)
   // Illustrates complex arrays that should probably be avoided
   let mixedUp = ["yeehaw", 42, true, ["yo"], {}];
   console.table(mixedUp);
-}
-goArrays(); line 165
+} 
+ 
+goArrays();
+
+
+
 
